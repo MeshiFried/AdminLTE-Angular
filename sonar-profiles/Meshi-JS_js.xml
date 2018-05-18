@@ -373,6 +373,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>S2550</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>S2583</key>
       <priority>MAJOR</priority>
       <parameters/>
@@ -428,6 +434,12 @@
     <rule>
       <repositoryKey>javascript</repositoryKey>
       <key>S2873</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
+      <key>S2898</key>
       <priority>MAJOR</priority>
       <parameters/>
     </rule>
