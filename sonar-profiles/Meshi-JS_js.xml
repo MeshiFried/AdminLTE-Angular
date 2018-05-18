@@ -70,6 +70,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>ElseIfWithoutElse</key>
+      <priority>CRITICAL</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>EmptyBlock</key>
       <priority>MAJOR</priority>
       <parameters/>
@@ -523,6 +529,12 @@
     <rule>
       <repositoryKey>javascript</repositoryKey>
       <key>S3509</key>
+      <priority>BLOCKER</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
+      <key>S3513</key>
       <priority>BLOCKER</priority>
       <parameters/>
     </rule>
