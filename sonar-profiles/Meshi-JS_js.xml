@@ -46,6 +46,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>ContinueStatement</key>
+      <priority>MINOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>DebuggerStatement</key>
       <priority>MINOR</priority>
       <parameters/>
