@@ -16,6 +16,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>AssignmentWithinCondition</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>BitwiseOperators</key>
       <priority>MINOR</priority>
       <parameters/>
