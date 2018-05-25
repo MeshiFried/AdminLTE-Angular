@@ -187,6 +187,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>S1105</key>
+      <priority>MINOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>S1116</key>
       <priority>MINOR</priority>
       <parameters/>
@@ -690,6 +696,12 @@
     <rule>
       <repositoryKey>javascript</repositoryKey>
       <key>S930</key>
+      <priority>CRITICAL</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
+      <key>StrictMode</key>
       <priority>CRITICAL</priority>
       <parameters/>
     </rule>
