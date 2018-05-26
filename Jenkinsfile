@@ -1,4 +1,4 @@
-@Library("sonarqubeLibrary@master")
+@Library("SonarqubeLib@master")
 import org.technion.sonarqube.*
 
 node('Node1'){
