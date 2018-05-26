@@ -337,6 +337,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>S2138</key>
+      <priority>MINOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>S2189</key>
       <priority>BLOCKER</priority>
       <parameters/>
