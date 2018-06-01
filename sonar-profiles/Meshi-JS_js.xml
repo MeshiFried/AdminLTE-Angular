@@ -624,6 +624,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>S3760</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>S3776</key>
       <priority>CRITICAL</priority>
       <parameters>
