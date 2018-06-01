@@ -1,0 +1,53 @@
+@Library("sonarqubeLibrary@master")
+import org.technion.sonarqube.*
+
+node('SoanrQubeNode') {
+    
+    // clean workspace:
+    stage('cleanup') {
+        cleanWs()
+    }
+    
+    // clone project to workspace folder (notice the "." after the url):
+    stage('clone repository') {
+        run("git clone " + "${GIT_URL}" + " .")
+    }
+    
+    // export profiles:
+    stage('export profiles') {
+        try {
+            def exportProfile = new ExportProfile()
+            if (env.PROJECT_KEY && !env.PROFILE_LANGUAGE && !env.PROFILE_NAME) {
+                exportProfile.exportProfile("${SONARQUBE_SERVER}", "${WORKSPACE}\\${PROFILES_DIRECTORY}", "${PROJECT_KEY}")
+            } else if (!env.PROJECT_KEY && env.PROFILE_LANGUAGE && env.PROFILE_NAME) {
+                exportProfile.exportProfile("${SONARQUBE_SERVER}", "${WORKSPACE}\\${PROFILES_DIRECTORY}", "${PROFILE_LANGUAGE}", "${PROFILE_NAME}")
+            } else {
+                println "pipeline: parameters [PROJECT_KEY] or [PROFILE_LANGUAGE and PROFILE_NAME] are missing"
+                currentBuild.result = 'FAILURE'
+            }            
+        } catch(IOException e) {
+            println(e.getMessage())
+            currentBuild.result = 'FAILURE'
+        }
+    }
+    
+    // in case of failure in previous stage - return:
+    if (currentBuild.result == 'FAILURE') {
+        return
+    }
+    
+    // update repository:
+    stage('push profiles to repository') {
+        run("git add ${PROFILES_DIRECTORY}")       
+        run('git diff-index --quiet HEAD || git commit -m "Sonar profiles changes"')
+        run("git push")
+    }
+}
+
+def run(command) {
+    if(isUnix()) {
+        shell(command)
+    } else {
+        bat(command)
+    }
+}
