@@ -17,12 +17,12 @@ node('Node1'){
         }
     }
     
-    stage('export profiles'){
+    stage('export profiles123'){
         //Script params: 
         //SONARSRV - example: http://localhost:9000
         //PRDIR - the name of the profiles folder, example: sonar-profiles 
         //PROJECTKEY - the project key from sonarQube 
-        writeTestFile();
+       
 
         try {
             def exportProfile = new ExportProfile()
