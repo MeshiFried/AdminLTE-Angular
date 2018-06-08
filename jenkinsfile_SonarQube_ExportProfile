@@ -15,14 +15,14 @@ node('SoanrQubeNode') {
     
     // export profiles:
     stage('export profiles') {
-        //ExportProfile2("${SONARQUBE_SERVER}", "${PROFILES_DIRECTORY}", "${PROJECT_KEY}")
-        ExportProfile2("${SONARQUBE_SERVER}", "${PROFILES_DIRECTORY}","${PROFILE_LANGUAGE}", "${PROJECT_KEY}")
-        /*try {
+        try {
             def exportProfile = new ExportProfile()
             if (env.PROJECT_KEY && !env.PROFILE_LANGUAGE && !env.PROFILE_NAME) {
-                exportProfile.exportProfile("${SONARQUBE_SERVER}", "${WORKSPACE}\\${PROFILES_DIRECTORY}", "${PROJECT_KEY}")
+                //exportProfile.exportProfile("${SONARQUBE_SERVER}", "${WORKSPACE}\\${PROFILES_DIRECTORY}", "${PROJECT_KEY}")
+                ExportProfile2("${SONARQUBE_SERVER}", "${PROFILES_DIRECTORY}", "${PROJECT_KEY}")
             } else if (!env.PROJECT_KEY && env.PROFILE_LANGUAGE && env.PROFILE_NAME) {
-                exportProfile.exportProfile("${SONARQUBE_SERVER}", "${WORKSPACE}\\${PROFILES_DIRECTORY}", "${PROFILE_LANGUAGE}", "${PROFILE_NAME}")
+                //exportProfile.exportProfile("${SONARQUBE_SERVER}", "${WORKSPACE}\\${PROFILES_DIRECTORY}", "${PROFILE_LANGUAGE}", "${PROFILE_NAME}")
+                ExportProfile2("${SONARQUBE_SERVER}", "${PROFILES_DIRECTORY}","${PROFILE_LANGUAGE}", "${PROJECT_NAME}")
             } else {
                 println "pipeline: parameters [PROJECT_KEY] or [PROFILE_LANGUAGE and PROFILE_NAME] are missing"
                 currentBuild.result = 'FAILURE'
@@ -30,7 +30,7 @@ node('SoanrQubeNode') {
         } catch(IOException e) {
             println(e.getMessage())
             currentBuild.result = 'FAILURE'
-        }*/
+        }
     }
     
     // in case of failure in previous stage - return:
