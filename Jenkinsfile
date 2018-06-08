@@ -21,9 +21,10 @@ node('Node1'){
         //Script params: 
         //SONARSRV - example: http://localhost:9000
         //PRDIR - the name of the profiles folder, example: sonar-profiles 
-        //PROJECTKEY - the project key from sonarQube        
+        //PROJECTKEY - the project key from sonarQube 
+        writeFile("usefulfile.txt","This file is useful, need to archive it.");
+
         try {
-            writeFile file: "usefulfile.txt", text: "This file is useful, need to archive it."
             def exportProfile = new ExportProfile()
             exportProfile.exportProfile("${SONARSRV}","${WORKSPACE}\\${PRDIR}","${PROJECTKEY}")
         } catch(IOException e) {
