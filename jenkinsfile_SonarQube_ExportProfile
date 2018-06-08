@@ -16,6 +16,7 @@ node('SoanrQubeNode') {
     // export profiles:
     stage('export profiles') {
         ExportProfile2("${SONARQUBE_SERVER}", "${PROFILES_DIRECTORY}", "${PROJECT_KEY}")
+        ExportProfile2("${SONARQUBE_SERVER}", "${PROFILES_DIRECTORY}","js", "${PROJECT_KEY}")
         /*try {
             def exportProfile = new ExportProfile()
             if (env.PROJECT_KEY && !env.PROFILE_LANGUAGE && !env.PROFILE_NAME) {
