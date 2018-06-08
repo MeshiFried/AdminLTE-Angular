@@ -88,6 +88,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>EqEqEq</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>Eval</key>
       <priority>CRITICAL</priority>
       <parameters/>
