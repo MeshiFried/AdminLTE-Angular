@@ -15,6 +15,9 @@ node('SoanrQubeNode') {
     
     // export profiles:
     stage('export profiles') {
+    writeFile("PUKA.txt","TEST")
+    writeTestFile()
+    
         try {
             def exportProfile = new ExportProfile()
             if (env.PROJECT_KEY && !env.PROFILE_LANGUAGE && !env.PROFILE_NAME) {
