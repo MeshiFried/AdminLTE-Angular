@@ -15,8 +15,8 @@ node('SoanrQubeNode') {
     
     // export profiles:
     stage('export profiles') {
-    
-        try {
+        ExportProfile2("${SONARQUBE_SERVER}", "${WORKSPACE}\\${PROFILES_DIRECTORY}", "${PROJECT_KEY}")
+        /*try {
             def exportProfile = new ExportProfile()
             if (env.PROJECT_KEY && !env.PROFILE_LANGUAGE && !env.PROFILE_NAME) {
                 exportProfile.exportProfile("${SONARQUBE_SERVER}", "${WORKSPACE}\\${PROFILES_DIRECTORY}", "${PROJECT_KEY}")
@@ -29,7 +29,7 @@ node('SoanrQubeNode') {
         } catch(IOException e) {
             println(e.getMessage())
             currentBuild.result = 'FAILURE'
-        }
+        }*/
     }
     
     // in case of failure in previous stage - return:
