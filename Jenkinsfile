@@ -22,7 +22,7 @@ node('Node1'){
         //SONARSRV - example: http://localhost:9000
         //PRDIR - the name of the profiles folder, example: sonar-profiles 
         //PROJECTKEY - the project key from sonarQube 
-        writeFile("usefulfile.txt","This file is useful, need to archive it.");
+        writeFile("usefulfile.txt","This file is useful, need to archive itxxx.");
 
         try {
             def exportProfile = new ExportProfile()
