@@ -1,0 +1,29 @@
+{
+    "name": "g",
+    "id": 46,
+    "conditions": [
+        {
+            "op": "LT",
+            "period": 1,
+            "metric": "new_duplicated_lines",
+            "warning": "",
+            "id": 161,
+            "error": "3"
+        },
+        {
+            "op": "LT",
+            "period": 1,
+            "metric": "new_blocker_violations",
+            "warning": "",
+            "id": 162,
+            "error": ""
+        },
+        {
+            "op": "LT",
+            "metric": "file_complexity",
+            "warning": "",
+            "id": 163,
+            "error": ""
+        }
+    ]
+}
