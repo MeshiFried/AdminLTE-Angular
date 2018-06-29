@@ -480,6 +480,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>S2770</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>S2814</key>
       <priority>MAJOR</priority>
       <parameters/>
@@ -763,6 +769,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>S878</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>S905</key>
       <priority>MAJOR</priority>
       <parameters/>
@@ -790,6 +802,17 @@
       <key>TooManyBreakOrContinueInLoop</key>
       <priority>MAJOR</priority>
       <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
+      <key>TrailingComment</key>
+      <priority>MINOR</priority>
+      <parameters>
+        <parameter>
+          <key>legalCommentPattern</key>
+          <value>^//\s*+[^\s]++$</value>
+        </parameter>
+      </parameters>
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
