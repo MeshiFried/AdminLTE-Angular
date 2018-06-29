@@ -10,6 +10,12 @@
     </rule>
     <rule>
       <repositoryKey>common-js</repositoryKey>
+      <key>FailedUnitTests</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>common-js</repositoryKey>
       <key>InsufficientBranchCoverage</key>
       <priority>MAJOR</priority>
       <parameters>
@@ -153,6 +159,12 @@
     <rule>
       <repositoryKey>javascript</repositoryKey>
       <key>HtmlComments</key>
+      <priority>MINOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
+      <key>MissingNewlineAtEndOfFile</key>
       <priority>MINOR</priority>
       <parameters/>
     </rule>
@@ -468,6 +480,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>S2714</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>S2715</key>
       <priority>MAJOR</priority>
       <parameters/>
@@ -601,6 +619,12 @@
       <repositoryKey>javascript</repositoryKey>
       <key>S3513</key>
       <priority>BLOCKER</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
+      <key>S3514</key>
+      <priority>MINOR</priority>
       <parameters/>
     </rule>
     <rule>
@@ -771,6 +795,12 @@
       <repositoryKey>javascript</repositoryKey>
       <key>S878</key>
       <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
+      <key>S888</key>
+      <priority>CRITICAL</priority>
       <parameters/>
     </rule>
     <rule>
