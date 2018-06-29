@@ -9,6 +9,17 @@
       <parameters/>
     </rule>
     <rule>
+      <repositoryKey>common-js</repositoryKey>
+      <key>InsufficientBranchCoverage</key>
+      <priority>MAJOR</priority>
+      <parameters>
+        <parameter>
+          <key>minimumBranchCoverageRatio</key>
+          <value>65</value>
+        </parameter>
+      </parameters>
+    </rule>
+    <rule>
       <repositoryKey>javascript</repositoryKey>
       <key>ArrayAndObjectConstructors</key>
       <priority>MINOR</priority>
@@ -403,6 +414,12 @@
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
+      <key>S2424</key>
+      <priority>MAJOR</priority>
+      <parameters/>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
       <key>S2432</key>
       <priority>MAJOR</priority>
       <parameters/>
@@ -600,6 +617,12 @@
           <value>false</value>
         </parameter>
       </parameters>
+    </rule>
+    <rule>
+      <repositoryKey>javascript</repositoryKey>
+      <key>S3525</key>
+      <priority>CRITICAL</priority>
+      <parameters/>
     </rule>
     <rule>
       <repositoryKey>javascript</repositoryKey>
